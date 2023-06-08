@@ -13,29 +13,25 @@
     <!-- FONTE -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Press+Start+2P&display=swap" rel="stylesheet">    <!-- /FONTE -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Press+Start+2P&display=swap"
+        rel="stylesheet"> <!-- /FONTE -->
 
-    <script>
-        var meuBotao = document.getElementById('vertrailer');
-        var fundoElemento = document.getElementById('fundo');
 
-        meuBotao.addEventListener('click', function() {
-        meuElemento.classList.toggle('atualizado');
-        });
-    </script>
+
 </head>
 
 <body>
-    <div id="fundo">
-        <video autoplay loop muted>
-            <source src="src/darkwoodvideo.webm" type="video/mp4">
-        </video>
-    </div>
-    <!-- Logo -->
-    <img class="logo"  src="darkwoodlogo.png" alt="Drkwood logo">
+    <div id="fundo" class="elemento-removivel">
 
-    <div class="conteudo">
-        <div class="divgeneros">
+    </div>
+    <video autoplay loop muted>
+        <source src="src/darkwoodvideo.webm" type="video/mp4">
+    </video>
+    <!-- Logo -->
+    <img class="logo elemento-removivel" src="darkwoodlogo.png" alt="Drkwood logo">
+
+    <div class="conteudo elemento-removivel">
+        <div class="divgeneros ">
             <p class="generos">Terror</p>
             <p class="generos">Sobrevivência</p>
             <p class="generos">Atmosférico</p>
@@ -54,8 +50,59 @@
             <p>Steam</p>
             <p>Nintendo Switch</p>
         </div>
-        <button id="vertrailer">Ver Trailer</button>
+
     </div>
+    <button id="vertrailer">Ver Trailer</button>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function (event) {
+            var video = document.querySelector("video");
+            var elementosRemoviveis = document.getElementsByClassName("elemento-removivel");
+            var botao = document.getElementById("vertrailer");
+            var elementosOcultos = false;
+
+
+            function ocultarElementos() {
+                for (var i = 0; i < elementosRemoviveis.length; i++) {
+                    elementosRemoviveis[i].style.display = "none";
+                }
+                elementosOcultos = true;
+            }
+
+            function exibirElementos() {
+                for (var i = 0; i < elementosRemoviveis.length; i++) {
+                    elementosRemoviveis[i].style.display = "";
+                }
+                elementosOcultos = false;
+            }
+            function desmutarVideo() {
+                video.muted = false;
+                var volume = 0.5; // Volume inicial
+                var intervalo = setInterval(function () {
+                    if (volume >= 1) {
+                        clearInterval(intervalo);
+                    }
+                    video.volume = volume;
+                    volume += 0.1; // Aumento gradual do volume
+                }, 500); // Intervalo de tempo para cada incremento (em milissegundos)
+            }
+            video.addEventListener("play", function () {
+                if (elementosOcultos) {
+                    ocultarElementos();
+                }
+            });
+
+            botao.addEventListener("click", function () {
+                if (elementosOcultos) {
+                    exibirElementos();
+                } else {
+                    ocultarElementos();
+                }
+            });
+        });
+    </script>
+
+
 
 </body>
 
