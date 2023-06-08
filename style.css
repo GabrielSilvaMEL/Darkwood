@@ -65,7 +65,7 @@ video {
     border-radius: 10px;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.2rem;
-    cursor: url(cursorpointer.cur),auto;
+    cursor: url(src/cursorpointer.cur),auto;
 }
 
 .trailercontainer{
