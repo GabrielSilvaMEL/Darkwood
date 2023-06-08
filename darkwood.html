@@ -16,8 +16,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Press+Start+2P&display=swap"
         rel="stylesheet"> <!-- /FONTE -->
 
-
-
 </head>
 
 <body>
@@ -26,7 +24,7 @@
         <source src="src/darkwoodvideo.webm" type="video/mp4">
     </video>
     <!-- Logo -->
-    <img class="logo elemento-removivel" src="darkwoodlogo.png" alt="Darkwood logo">
+    <img class="logo elemento-removivel" src="src/darkwoodlogo.png" alt="Darkwood logo">
 
     <div class="conteudo elemento-removivel">
         <div class="divgeneros">
@@ -57,10 +55,9 @@
             <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="0.5">
         </div>
     </div>
-    
 
     <script>
-        document.addEventListener("DOMContentLoaded", function(event) {
+        document.addEventListener("DOMContentLoaded", function (event) {
             var video = document.getElementById("trailer");
             var elementosRemoviveis = document.getElementsByClassName("elemento-removivel");
             var botao = document.getElementById("vertrailer");
@@ -86,13 +83,13 @@
                 video.volume = volumeSlider.value;
             }
 
-            video.addEventListener("play", function() {
+            video.addEventListener("play", function () {
                 if (elementosOcultos) {
                     ocultarElementos();
                 }
             });
 
-            botao.addEventListener("click", function() {
+            botao.addEventListener("click", function () {
                 if (elementosOcultos) {
                     exibirElementos();
                     video.muted = true; // Mutar o vídeo quando os elementos são exibidos novamente

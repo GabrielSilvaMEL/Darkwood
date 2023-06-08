@@ -8,7 +8,7 @@ video {
     z-index: -1;
 }
 * {
-    cursor: url(src/cursor3.cur), auto;
+    cursor: url(cursor3.cur), auto;
 }
 #fundo{
     content: "";
@@ -76,7 +76,7 @@ video {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    cursor: url(src/cursorpointer.cur),auto;
+    cursor: url(cursorpointer.cur),auto;
 
 }
 
@@ -88,7 +88,7 @@ video {
     -webkit-appearance: none;
     appearance: none;
     outline: none;
-    cursor: url(src/cursorpointer.cur),auto;
+    cursor: url(cursorpointer.cur),auto;
 
 }
 
@@ -99,7 +99,7 @@ video {
     height: 20px;
     background-color: #000000;
     border-radius: 50%;
-    cursor: url(src/cursorpointer.cur),auto;
+    cursor: url(cursorpointer.cur),auto;
 }
 
 #volume-slider::-moz-range-thumb {
@@ -107,6 +107,6 @@ video {
     height: 20px;
     background-color: #ffffff;
     border-radius: 50%;
-    cursor: url(src/cursorpointer.cur),auto;
+    cursor: url(cursorpointer.cur),auto;
 
 }
