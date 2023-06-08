@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DARKWOOD</title>
+
+    <!-- STYLE -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- FONTE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Press+Start+2P&display=swap" rel="stylesheet">    <!-- /FONTE -->
+
+    <script>
+        var meuBotao = document.getElementById('vertrailer');
+        var fundoElemento = document.getElementById('fundo');
+
+        meuBotao.addEventListener('click', function() {
+        meuElemento.classList.toggle('atualizado');
+        });
+    </script>
+</head>
+
+<body>
+    <div id="fundo">
+        <video autoplay loop muted>
+            <source src="src/darkwoodvideo.webm" type="video/mp4">
+        </video>
+    </div>
+    <!-- Logo -->
+    <img class="logo"  src="darkwoodlogo.png" alt="Drkwood logo">
+
+    <div class="conteudo">
+        <div class="divgeneros">
+            <p class="generos">Terror</p>
+            <p class="generos">Sobrevivência</p>
+            <p class="generos">Atmosférico</p>
+            <p class="generos">Sobrenatural</p>
+        </div>
+        <p class="conteudotexto">
+            Uma nova perspectiva sobre o survival horror. <br>
+            Durante o dia, vasculhe e explore livremente um mundo rico e em constante mudança.
+            Então, recolha-se em seu esconderijo e reze pela chegada da luz da manhã.
+        </p>
+        <div class="divplataformas">
+            <p>Xbox One</p>
+            <p>Xbox Series S</p>
+            <p>PS4</p>
+            <p>PS5</p>
+            <p>Steam</p>
+            <p>Nintendo Switch</p>
+        </div>
+        <button id="vertrailer">Ver Trailer</button>
+    </div>
+
+</body>
+
+</html>
