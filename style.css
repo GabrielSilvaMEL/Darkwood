@@ -7,7 +7,9 @@ video {
     object-fit: cover;
     z-index: -1;
 }
-
+* {
+    cursor: url(cursor3.cur), auto;
+}
 #fundo{
     content: "";
     height: 100vh;
@@ -63,7 +65,7 @@ video {
     border-radius: 10px;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.2rem;
-    
+    cursor: url(cursorpointer.cur),auto;
 }
 
 .trailercontainer{
@@ -74,6 +76,8 @@ video {
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    cursor: url(cursorpointer.cur),auto;
+
 }
 
 #volume-slider {
@@ -84,6 +88,8 @@ video {
     -webkit-appearance: none;
     appearance: none;
     outline: none;
+    cursor: url(cursorpointer.cur),auto;
+
 }
 
 #volume-slider::-webkit-slider-thumb {
@@ -93,7 +99,7 @@ video {
     height: 20px;
     background-color: #000000;
     border-radius: 50%;
-    cursor: pointer;
+    cursor: url(cursorpointer.cur),auto;
 }
 
 #volume-slider::-moz-range-thumb {
@@ -101,5 +107,6 @@ video {
     height: 20px;
     background-color: #ffffff;
     border-radius: 50%;
-    cursor: pointer;
+    cursor: url(cursorpointer.cur),auto;
+
 }
