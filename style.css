@@ -57,8 +57,18 @@ video {
     display: flex;
     flex-direction: row;
     gap: 1.2rem;
-    letter-spacing: 1px; 
+    letter-spacing: 1px; align-self: flex-end;
 }
+.divplataformas a{
+    text-decoration: none;
+    color:white;
+    font-size:2rem;
+    
+}
+i{
+    cursor: url(src/cursorpointer.cur),auto;
+}
+
 #vertrailer{
     background-color: #d9d9d9;
     padding: 10px;
@@ -97,7 +107,7 @@ video {
     appearance: none;
     width: 20px;
     height: 20px;
-    background-color: #000000;
+    background-color: #999999;
     border-radius: 50%;
     cursor: url(src/cursorpointer.cur),auto;
 }
@@ -105,7 +115,7 @@ video {
 #volume-slider::-moz-range-thumb {
     width: 20px;
     height: 20px;
-    background-color: #ffffff;
+    background-color: #0e0d0d;
     border-radius: 50%;
     cursor: url(src/cursorpointer.cur),auto;
 
